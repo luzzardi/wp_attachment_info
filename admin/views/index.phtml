@@ -1,0 +1,21 @@
+<div class="wrap container_12 cc_admin">
+  <div class="grid_12">
+    <h2><?php echo _ATTACHMENT_INFO__PLUGIN_TITLE ?></h2>
+  </div>
+  <div class="clear"></div>
+  <div class="grid_12">
+    <label for="attachment">
+      <?php echo __('Attachments', _ATTACHMENT_INFO__PLUGIN_DOMAIN); ?>
+    </label><br />
+    <select class="attachments" name="attachments" id="attachments" data-action="getAttachmentInfo-<?php echo _ATTACHMENT_INFO__PLUGIN_DOMAIN ?>">
+      <option value=""><?php echo __('Select One', _ATTACHMENT_INFO__PLUGIN_DOMAIN); ?></option>
+      <?php foreach ($attachments as $key => $attachment) : ?>
+        <option value="<?php echo $attachment->ID ?>"><?php echo $attachment->post_title ?></option>
+      <?php endforeach; ?>
+    </select>
+  </div>
+  <div class="clear"></div>
+  <div id="result" class="grid_12">
+
+  </div>
+</div>
